@@ -1,0 +1,3 @@
+[submodule "swift-package"]
+	path = swift-package
+	url = https://github.com/zshannon/typescript-go-swift.git
