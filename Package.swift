@@ -17,8 +17,8 @@ let package = Package(
         ),
         .binaryTarget(
             name: "TSCBridgeLib",
-            url: "https://github.com/zshannon/typescript-go-swift/releases/download/0.1.2/TSCBridge.xcframework.zip",
-            checksum: "fbef72612b8819e62ecf86a5a29f5d2a09b6a2725433d5b58195ceede151743a"
+            url: "https://github.com/zshannon/typescript-go-swift/releases/download/0.1.3/TSCBridge.xcframework.zip",
+            checksum: "251a4dab4bbe5b5ee484e7d01bb342686845260e34a84818d6fbd48101086f71"
         ),
         .target(
             name: "SwiftTSGo",
