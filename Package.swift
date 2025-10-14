@@ -7,14 +7,25 @@ let package = Package(
     products: [
         .library(
             name: "SwiftTSGo",
-            targets: ["TSCBridgeLib"]
+            targets: ["SwiftTSGo"]
         ),
     ],
     targets: [
+        .systemLibrary(
+            name: "TSCBridge",
+            path: "Sources/TSCBridge"
+        ),
         .binaryTarget(
             name: "TSCBridgeLib",
             url: "https://github.com/zshannon/typescript-go-swift/releases/download/0.1.2/TSCBridge.xcframework.zip",
             checksum: "fbef72612b8819e62ecf86a5a29f5d2a09b6a2725433d5b58195ceede151743a"
+        ),
+        .target(
+            name: "SwiftTSGo",
+            dependencies: [
+                .target(name: "TSCBridge"),
+                .target(name: "TSCBridgeLib"),
+            ]
         ),
     ]
 )
