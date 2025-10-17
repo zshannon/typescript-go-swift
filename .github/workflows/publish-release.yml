@@ -37,9 +37,10 @@ jobs:
             exit 1
           fi
 
-          # Publish the release
+          # Publish the release and mark as latest
           gh api repos/zshannon/typescript-go-swift/releases/${RELEASE_ID} \
             -X PATCH \
-            -f draft=false
+            -f draft=false \
+            -f make_latest=true
 
-          echo "Published release ${VERSION}"
+          echo "Published release ${VERSION} as latest"
